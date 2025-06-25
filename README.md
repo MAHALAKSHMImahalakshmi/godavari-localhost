@@ -1,4 +1,122 @@
-# Getting Started with Create React App
+# Godavari Pushkaralu Travel Planner
+
+A React app to help pilgrims plan their trip to Godavari Pushkaralu, including itinerary, budget, crowd tips, and more.
+
+---
+
+## Features
+
+- Login and Signup authentication
+- Multi-language support (English, Hindi, Telugu)
+- Day-wise itinerary and trip roadmap
+- Budget summary and travel tips
+- Crowd management tips and info modals
+
+---
+
+## Getting Started
+
+Follow these steps to run the project on your local computer.
+
+### 1. **Clone the Repository**
+
+```sh
+git clone https://github.com/YOUR-USERNAME/YOUR-REPO-NAME.git
+cd YOUR-REPO-NAME
+```
+
+### 2. **Install Dependencies**
+
+Navigate to the client folder and install dependencies:
+
+```sh
+cd client
+npm install
+```
+
+If you have a backend (like Express or Firebase functions), also install dependencies there:
+
+```sh
+cd ../server   # or the backend folder name
+npm install
+```
+
+### 3. **Set Up Environment Variables**
+
+If your project uses Firebase or other APIs, create a `.env` file in the `client` folder and add your config:
+
+```
+REACT_APP_FIREBASE_API_KEY=your_api_key
+REACT_APP_FIREBASE_AUTH_DOMAIN=your_auth_domain
+REACT_APP_FIREBASE_PROJECT_ID=your_project_id
+# ...other Firebase config as needed
+```
+
+### 4. **Run the App**
+
+From the `client` folder, start the React app:
+
+```sh
+npm start
+```
+
+This will open [http://localhost:3000](http://localhost:3000) in your browser.
+
+If you have a backend, open a new terminal, go to the backend folder, and run:
+
+```sh
+npm start
+```
+
+### 5. **Login or Sign Up**
+
+- On the homepage, sign up for a new account or log in with your credentials.
+- After login, you’ll see the full Godavari Pushkaralu planner.
+
+---
+
+## Folder Structure
+
+```
+client/         # React frontend
+  src/
+    App.js
+    create.js
+    LoginForm.js
+    SignUpForm.js
+    firebase.js
+  public/
+server/         # (optional) Backend code
+```
+
+---
+
+## Troubleshooting
+
+- If you see errors about missing dependencies, run `npm install` again.
+- Make sure your Firebase or API keys are correct in `.env`.
+- If the app doesn’t open, check the terminal for errors and ensure you’re in the correct folder.
+
+---
+
+## Contributing
+
+Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
+
+---
+
+## License
+
+[MIT](LICENSE)
+
+---
+
+## Credits
+
+- Built with [React](https://reactjs.org/)
+- UI icons from [Lucide](https://lucide.dev/)
+
+# Resources Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
