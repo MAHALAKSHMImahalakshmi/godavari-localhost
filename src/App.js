@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import LoginForm from './LoginForm';
+import SignUpForm from './SignUpForm';
+import Create from './create'; // This is your main app UI
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [loggedIn, setLoggedIn] = useState(false);
+  const [showSignUp, setShowSignUp] = useState(false);
+
+  // Show login/signup until logged in
+  if (!loggedIn) {
+    return showSignUp ? (
+      <SignUpForm
+        onSignUp={() => setShowSignUp(false)}
+        onSwitchToLogin={() => setShowSignUp(false)}
+      />
+    ) : (
+      <LoginForm
+        onLogin={() => setLoggedIn(true)}
+        onSwitchToSignUp={() => setShowSignUp(true)}
+      />
+    );
+  }
+
+  // After login, show your full app (Create component)
+  return <Create />;
 }
 
-export default App;
+export default App;    
